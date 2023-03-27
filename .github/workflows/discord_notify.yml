@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Send notification to Discord
-      uses: Ilshidur/action-discord@2.4.5
+      uses: Ilshidur/action-discord@2.4.0
       with:
         args: "A new commit has been pushed to the repository. Check it out at: ${{ github.event.compare }}."
         channel_id: 1089899598325223524
