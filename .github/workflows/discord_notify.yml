@@ -15,10 +15,14 @@ jobs:
         DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
       with:
         args: >-
-          A new commit has been pushed to the repository:
+          A new commit has been pushed to GitHub:
+          
 
-          **Repo:** $${{ github.repository }}
-          **Branch:** $${{ github.ref }}
-          **User:** **$${{ github.actor }}**
+          **Repo:** ${{ github.repository }}
 
-          **URL**: $${{ github.event.compare }}.
+          **Branch:** ${{ github.ref }}
+
+          **User:** **${{ github.actor }}**
+          
+
+          **URL**: ${{ github.event.compare }}.
